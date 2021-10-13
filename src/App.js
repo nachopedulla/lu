@@ -9,7 +9,7 @@ import MainPage from './components/MainPage';
 import Songs from './components/Songs';
 import Pics from './components/Pics';
 import { AuthProvider } from './context/AuthContext';
-import { BrowserRouter as Router, Switch, Route, Redirect } from "react-router-dom";
+import { HashRouter as Router, Switch, Route, Redirect } from "react-router-dom";
 import PrivateRoute from './PrivateRoute';
 
 const useStyles = makeStyles({
@@ -35,15 +35,13 @@ const App = () => {
     <div className="App">
       <AuthProvider>
         <div className={classes.content}> 
-        <NavBar logged/>
-          <Router>
+          <Router basename={'/'}>
+            <NavBar/>
             <Switch>
-              <PrivateRoute path="/home" component={MainPage}/>
-              <PrivateRoute path="/fotos" component={Pics}/>
-              <PrivateRoute path="/canciones" component={Songs}/> 
-              <PrivateRoute path="/contador" component={Countdown} params={{startDate: new Date(2021, 7, 7, 20, 0, 0), endDate: currentDate}}/>
-              <Route path="/lu" exact> <Redirect to="/home"/> </Route>
-              <Route path="/login" component> <LoginForm/> </Route>
+              <PrivateRoute exact path="/" component={MainPage}/>
+              <PrivateRoute exact path="/fotos" component={Pics}/>
+              <PrivateRoute exact path="/canciones" component={Songs}/> 
+              <PrivateRoute exact path="/contador" component={Countdown} params={{startDate: new Date(2021, 7, 7, 20, 0, 0), endDate: currentDate}}/>
             </Switch>
           </Router>
         </div>

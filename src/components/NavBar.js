@@ -2,6 +2,7 @@ import { makeStyles } from '@material-ui/core'
 import React from 'react'
 import { Navbar, Nav } from 'react-bootstrap'
 import { useAuth } from '../context/AuthContext';
+import { Link } from 'react-router-dom'
 
 const useStyles = makeStyles({
     container: {
@@ -53,13 +54,13 @@ const NavBar = () => {
 
     const navbar = auth.logged() ? (
         <Navbar bg='dark' variant='dark' className={classes.container}>
-            <Navbar.Brand href="/home">Página para Lu</Navbar.Brand>
+            <Navbar.Brand>Página para Lu</Navbar.Brand>
             <div className={classes.nav}>
                 <Nav>
-                    <Nav.Link href="/home" className={classes.navItem} style={{color: 'white'}}>Home</Nav.Link>
-                    <Nav.Link href="/contador" className={classes.navItem} style={{color: 'white'}}>Contador</Nav.Link>
-                    <Nav.Link href="/canciones" className={classes.navItem} style={{color: 'white'}}>Canciones</Nav.Link>
-                    <Nav.Link href="/fotos" className={classes.navItem} style={{color: 'white'}}>Fotos</Nav.Link>
+                    <Link to="/" className={classes.navItem} style={{color: 'white'}}>Home</Link>
+                    <Link to="/contador" className={classes.navItem} style={{color: 'white'}}>Contador</Link>
+                    <Link to="/canciones" className={classes.navItem} style={{color: 'white'}}>Canciones</Link>
+                    <Link to="/fotos" className={classes.navItem} style={{color: 'white'}}>Fotos</Link>
                 </Nav>
             </div>
         </Navbar>
