@@ -26,6 +26,7 @@ const useStyles = makeStyles({
         height: '46px',
         width: '90px',
         margin: '0px 1px',
+        paddingTop: '10px',
         display: 'flex',
         textAlign: 'center',
         justifyContent: 'center',
@@ -57,10 +58,10 @@ const NavBar = () => {
             <Navbar.Brand>Página para Lu</Navbar.Brand>
             <div className={classes.nav}>
                 <Nav>
-                    <Link to="/" className={classes.navItem} style={{color: 'white'}}>Home</Link>
-                    <Link to="/contador" className={classes.navItem} style={{color: 'white'}}>Contador</Link>
-                    <Link to="/canciones" className={classes.navItem} style={{color: 'white'}}>Canciones</Link>
-                    <Link to="/fotos" className={classes.navItem} style={{color: 'white'}}>Fotos</Link>
+                    <Link to="/" className={classes.navItem} style={{color: 'white', textDecoration: 'none'}}>Home</Link>
+                    <Link to="/contador" className={classes.navItem} style={{color: 'white', textDecoration: 'none'}}>Contador</Link>
+                    <Link to="/canciones" className={classes.navItem} style={{color: 'white', textDecoration: 'none'}}>Canciones</Link>
+                    <Link to="/fotos" className={classes.navItem} style={{color: 'white', textDecoration: 'none'}}>Fotos</Link>
                 </Nav>
             </div>
         </Navbar>
