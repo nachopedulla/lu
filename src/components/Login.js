@@ -3,7 +3,6 @@ import Form from 'react-bootstrap/Form';
 import { useAuth } from '../context/AuthContext';
 import { useState } from 'react';
 import { makeStyles } from '@material-ui/core/styles';
-import { useHistory } from "react-router";
 
 const useStyles = makeStyles({
     form: {
@@ -30,14 +29,13 @@ const useStyles = makeStyles({
   }
 });
 
-const LoginForm = (props) => {
+const LoginForm = () => {
 
     const [password, setPassword] = useState("");
     const [error, setError] = useState(false);
 
     const classes=useStyles();
     const auth = useAuth();
-    let history = useHistory();
 
     const passwordChangeHandler = (value) => setPassword(value); 
     
@@ -47,12 +45,9 @@ const LoginForm = (props) => {
 
         auth.login(password);
 
-        if (auth.logged()) {
-            history.push('/home')
-        } else { 
+        if (!auth.logged()) {
             setPassword("");
-            setError(true);
-            
+            setError(true);  
         }
     } 
 
