@@ -9,7 +9,7 @@ const AuthProvider = (props) => {
 
     const login = (password) => {
         const compare = String.fromCharCode(109, 111, 110, 111, 110, 97);
-        if (password == compare) {
+        if (password === compare) {
             localStorageHelper.setItem('logged', true);
         }
     }

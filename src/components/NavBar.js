@@ -26,15 +26,23 @@ const useStyles = makeStyles({
         height: '46px',
         width: '90px',
         margin: '0px 1px',
+        borderRadius: '0px',
+        color: 'white',
         paddingTop: '10px',
+        textTransform: 'none',
+        font: 'inherit',
         display: 'flex',
         textAlign: 'center',
+        boxShadow: 'none',
         justifyContent: 'center',
+        textAlign: 'center',
         cursor: 'pointer',
         '&:hover': {
             backgroundColor: '#10d99c'
         },
         '@media(max-width: 500px)': {
+            width: '20%',
+            fontSize: '0.9rem',
             display: 'block',
             width: '25%',
             margin: '0px',
@@ -62,6 +70,7 @@ const NavBar = () => {
                     <Link to="/contador" className={classes.navItem} style={{color: 'white', textDecoration: 'none'}}>Contador</Link>
                     <Link to="/canciones" className={classes.navItem} style={{color: 'white', textDecoration: 'none'}}>Canciones</Link>
                     <Link to="/fotos" className={classes.navItem} style={{color: 'white', textDecoration: 'none'}}>Fotos</Link>
+                    <div onClick={() => auth.logout()} className={classes.navItem}> Salir </div>
                 </Nav>
             </div>
         </Navbar>
