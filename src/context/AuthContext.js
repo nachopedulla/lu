@@ -4,7 +4,7 @@ import { LocalStorageHelper } from '../helpers/LocalStorageHelper';
 const AuthContext = React.createContext();
 
 const AuthProvider = (props) => {
-    
+
     let localStorageHelper = new LocalStorageHelper();
 
     const login = (password) => {
