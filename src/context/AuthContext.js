@@ -11,7 +11,10 @@ const AuthProvider = (props) => {
         const compare = String.fromCharCode(109, 111, 110, 111, 110, 97);
         if (password === compare) {
             localStorageHelper.setItem('logged', true);
+            window.location.reload();
+            return true;
         }
+        return false;
     }
 
     const logged = () => {
@@ -19,7 +22,10 @@ const AuthProvider = (props) => {
         return (isLogged === null) ? false : isLogged;
     }
 
-    const logout = () => localStorageHelper.clear();
+    const logout = () => { 
+        localStorageHelper.clear();
+        window.location.reload();
+    }
 
     return (
         <AuthContext.Provider value={{login, logout, logged}} {...props}/>

@@ -18,7 +18,7 @@ const useStyles = makeStyles({
         '@media(max-width: 500px)': {
             display: 'block',
             padding: '0px',
-            height: '76px'
+            margin: '0px',
         }
     },
     navItem: {
@@ -41,18 +41,19 @@ const useStyles = makeStyles({
             backgroundColor: '#10d99c'
         },
         '@media(max-width: 500px)': {
-            width: '20%',
-            fontSize: '0.9rem',
-            display: 'block',
             width: '25%',
+            fontSize: '0.9rem',
             margin: '0px',
             borderRight: '1px solid #3d855a'
         }
     },
     nav: {
+        display: 'flex',
         '@media(max-width: 500px)': {
             width: '100%',
-            marginTop: '10px'   
+            flexFlow: 'wrap',
+            margin: 'auto',
+            marginTop: '10px',            
         }
     }
 })
@@ -65,13 +66,14 @@ const NavBar = () => {
         <Navbar bg='dark' variant='dark' className={classes.container}>
             <Navbar.Brand>Página para Lu</Navbar.Brand>
             <div className={classes.nav}>
-                <Nav>
-                    <Link to="/" className={classes.navItem} style={{color: 'white', textDecoration: 'none'}}>Home</Link>
-                    <Link to="/contador" className={classes.navItem} style={{color: 'white', textDecoration: 'none'}}>Contador</Link>
-                    <Link to="/canciones" className={classes.navItem} style={{color: 'white', textDecoration: 'none'}}>Canciones</Link>
-                    <Link to="/fotos" className={classes.navItem} style={{color: 'white', textDecoration: 'none'}}>Fotos</Link>
-                    <div onClick={() => auth.logout()} className={classes.navItem}> Salir </div>
-                </Nav>
+                <Link to="/" className={classes.navItem} style={{color: 'white', textDecoration: 'none'}}>Home</Link>
+                <Link to="/contador" className={classes.navItem} style={{color: 'white', textDecoration: 'none'}}>Contador</Link>
+                <Link to="/canciones" className={classes.navItem} style={{color: 'white', textDecoration: 'none'}}>Canciones</Link>
+                <Link to="/fotos" className={classes.navItem} style={{color: 'white', textDecoration: 'none'}}>Fotos</Link>
+                <Link to="/cartas" className={classes.navItem} style={{color: 'white', textDecoration: 'none'}}>Cartas</Link>
+                <Link to="/selector" className={classes.navItem} style={{color: 'white', textDecoration: 'none'}}>Para hacer</Link>
+                <div className={classes.navItem} style={{backgroundColor: '#027452'}}></div>
+                <div onClick={() => auth.logout()} className={classes.navItem}> Salir </div>
             </div>
         </Navbar>
     ) : null;

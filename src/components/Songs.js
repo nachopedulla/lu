@@ -17,16 +17,13 @@ const useStyles = makeStyles({
     }
 })
 
-const LINK = "https://open.spotify.com/playlist/3hZQ81VgChbMfSKBDOwdQI?si=75fdeda61d034a39";
+const LINK_1 = 'https://open.spotify.com/playlist/3hZQ81VgChbMfSKBDOwdQI?si=75fdeda61d034a39';
+const LINK_2 = 'https://open.spotify.com/playlist/1fwLSPHjZl3kkeYLRCys3f?si=O3NxQsq1Rl6w1cmAAOYgeQ'
 
 const Songs = () => {
     
-    const openWebLink = () => {
-        window.open(LINK, "_blank")
-    }
-
-    const copiarLink = () => {
-        navigator.clipboard.writeText(LINK)
+    const openWebLink = (link) => {
+        window.open(link, "_blank")
     }
 
     const classes = useStyles();
@@ -36,13 +33,11 @@ const Songs = () => {
             <h4>Playlist de canciones lindas</h4>
             <div style={{height: '15px'}}/>
             <div className={classes.box}>
-                <h6>Acceder a spotify</h6>
-                <Button size={'small'} variant="contained" onClick={openWebLink}>IR</Button>
+                <h6>Canciones para Lu</h6>
+                <Button style={{marginRight: '5px'}} size={'small'} variant="contained" onClick={() => openWebLink(LINK_1)}>1</Button>
+                <Button style={{marginLeft: '5px'}} size={'small'} variant="contained" onClick={() => openWebLink(LINK_2)}>2</Button>
             </div>
-            <div className={classes.box}>
-                <h6>Copiar el link</h6>
-                <Button size={'small'} variant="contained" onClick={copiarLink}>COPIAR</Button>
-            </div>
+            
         </div>
     )
 }

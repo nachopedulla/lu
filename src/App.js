@@ -5,6 +5,8 @@ import NavBar from './components/NavBar';
 import MainPage from './components/MainPage';
 import Songs from './components/Songs';
 import Pics from './components/Pics';
+import Cartas from './components/Cartas';
+import Selector from './components/Selector'
 import { AuthProvider } from './context/AuthContext';
 import { HashRouter as Router, Switch } from "react-router-dom";
 import PrivateRoute from './PrivateRoute';
@@ -17,7 +19,7 @@ const useStyles = makeStyles({
     fontSize: '.9rem',
     overflow: 'auto',
     '@media(max-width: 500px)': {
-      marginTop: '120px'
+      marginTop: '160px'
     }
   }
 })
@@ -37,6 +39,9 @@ const App = () => {
               <PrivateRoute exact path="/fotos" component={Pics}/>
               <PrivateRoute exact path="/canciones" component={Songs}/> 
               <PrivateRoute exact path="/contador" component={CountdownWrapper}/>
+              <PrivateRoute exact path="/cartas" component={Cartas}/>
+              <PrivateRoute exact path="/eventos" component={() => (<div>Proximamente</div>)}/>
+              <PrivateRoute exact path="/selector" component={Selector}/>
             </Switch>
           </Router>
         </div>

@@ -1,4 +1,4 @@
-import React from "react";
+import { React } from "react";
 import Form from 'react-bootstrap/Form';
 import { useAuth } from '../context/AuthContext';
 import { useState } from 'react';
@@ -43,11 +43,9 @@ const LoginForm = () => {
         event.preventDefault();
         event.stopPropagation();
 
-        auth.login(password);
-
-        if (!auth.logged()) {
-            setPassword("");
-            setError(true);  
+        if(!auth.login(password)) {
+          setPassword("");
+          setError(true);  
         }
     } 
 
