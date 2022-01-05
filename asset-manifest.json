@@ -1,19 +1,24 @@
 {
   "files": {
     "main.css": "/lu/static/css/main.a617e044.chunk.css",
-    "main.js": "/lu/static/js/main.ba3eacbd.chunk.js",
-    "main.js.map": "/lu/static/js/main.ba3eacbd.chunk.js.map",
-    "runtime-main.js": "/lu/static/js/runtime-main.59af745f.js",
-    "runtime-main.js.map": "/lu/static/js/runtime-main.59af745f.js.map",
+    "main.js": "/lu/static/js/main.5446bb6c.chunk.js",
+    "main.js.map": "/lu/static/js/main.5446bb6c.chunk.js.map",
+    "runtime-main.js": "/lu/static/js/runtime-main.94b9ca08.js",
+    "runtime-main.js.map": "/lu/static/js/runtime-main.94b9ca08.js.map",
     "static/css/2.4be38407.chunk.css": "/lu/static/css/2.4be38407.chunk.css",
-    "static/js/2.95077f09.chunk.js": "/lu/static/js/2.95077f09.chunk.js",
-    "static/js/2.95077f09.chunk.js.map": "/lu/static/js/2.95077f09.chunk.js.map",
-    "static/js/3.130f7bd7.chunk.js": "/lu/static/js/3.130f7bd7.chunk.js",
-    "static/js/3.130f7bd7.chunk.js.map": "/lu/static/js/3.130f7bd7.chunk.js.map",
+    "static/js/2.c5543f5d.chunk.js": "/lu/static/js/2.c5543f5d.chunk.js",
+    "static/js/2.c5543f5d.chunk.js.map": "/lu/static/js/2.c5543f5d.chunk.js.map",
+    "static/js/3.10c9b372.chunk.js": "/lu/static/js/3.10c9b372.chunk.js",
+    "static/js/3.10c9b372.chunk.js.map": "/lu/static/js/3.10c9b372.chunk.js.map",
     "index.html": "/lu/index.html",
     "static/css/2.4be38407.chunk.css.map": "/lu/static/css/2.4be38407.chunk.css.map",
     "static/css/main.a617e044.chunk.css.map": "/lu/static/css/main.a617e044.chunk.css.map",
-    "static/js/2.95077f09.chunk.js.LICENSE.txt": "/lu/static/js/2.95077f09.chunk.js.LICENSE.txt",
+    "static/js/2.c5543f5d.chunk.js.LICENSE.txt": "/lu/static/js/2.c5543f5d.chunk.js.LICENSE.txt",
+    "static/media/Año1.02648696.jpeg": "/lu/static/media/Año1.02648696.jpeg",
+    "static/media/Año2.4e161efc.jpeg": "/lu/static/media/Año2.4e161efc.jpeg",
+    "static/media/Año4.617329bb.jpeg": "/lu/static/media/Año4.617329bb.jpeg",
+    "static/media/Lic.b47a17d6.jpeg": "/lu/static/media/Lic.b47a17d6.jpeg",
+    "static/media/Siesta2022.d77e3310.jpeg": "/lu/static/media/Siesta2022.d77e3310.jpeg",
     "static/media/cfk.76bbbb85.jpeg": "/lu/static/media/cfk.76bbbb85.jpeg",
     "static/media/chui.a0b095a1.jpeg": "/lu/static/media/chui.a0b095a1.jpeg",
     "static/media/cumple.c1ecb0a3.jpeg": "/lu/static/media/cumple.c1ecb0a3.jpeg",
@@ -28,10 +33,10 @@
     "static/media/vagancia.462c4aaf.jpeg": "/lu/static/media/vagancia.462c4aaf.jpeg"
   },
   "entrypoints": [
-    "static/js/runtime-main.59af745f.js",
+    "static/js/runtime-main.94b9ca08.js",
     "static/css/2.4be38407.chunk.css",
-    "static/js/2.95077f09.chunk.js",
+    "static/js/2.c5543f5d.chunk.js",
     "static/css/main.a617e044.chunk.css",
-    "static/js/main.ba3eacbd.chunk.js"
+    "static/js/main.5446bb6c.chunk.js"
   ]
 }
