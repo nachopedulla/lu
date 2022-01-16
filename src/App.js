@@ -2,15 +2,17 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import './App.css';
 import { makeStyles } from '@material-ui/core/styles';
 import NavBar from './components/NavBar';
-import MainPage from './components/MainPage';
-import Songs from './components/Songs';
-import Pics from './components/Pics';
-import Cartas from './components/Cartas';
-import Selector from './components/Selector'
+import MainPage from './modules/MainPage';
+import Songs from './modules/Songs';
+import Pics from './modules/Pics';
+import Cartas from './modules/Cartas';
+import Selector from './modules/Selector'
+import Surprise from './modules/Surprise'
 import { AuthProvider } from './context/AuthContext';
 import { HashRouter as Router, Switch } from "react-router-dom";
 import PrivateRoute from './PrivateRoute';
-import CountdownWrapper from './components/CountdownWrapper';
+import CountdownWrapper from './modules/CountdownWrapper';
+import { FirebaseProvider } from './context/FirebaseContext';
 
 const useStyles = makeStyles({
   content: {
@@ -31,20 +33,23 @@ const App = () => {
   return (
     <div className="App">
       <AuthProvider>
-        <div className={classes.content}> 
-          <Router basename={'/'}>
-            <NavBar/>
-            <Switch>
-              <PrivateRoute exact path="/" component={MainPage}/>
-              <PrivateRoute exact path="/fotos" component={Pics}/>
-              <PrivateRoute exact path="/canciones" component={Songs}/> 
-              <PrivateRoute exact path="/contador" component={CountdownWrapper}/>
-              <PrivateRoute exact path="/cartas" component={Cartas}/>
-              <PrivateRoute exact path="/eventos" component={() => (<div>Proximamente</div>)}/>
-              <PrivateRoute exact path="/selector" component={Selector}/>
-            </Switch>
-          </Router>
-        </div>
+        <FirebaseProvider>
+          <div className={classes.content}> 
+            <Router basename={'/'}>
+              <NavBar/>
+              <Switch>
+                <PrivateRoute exact path="/" component={MainPage}/>
+                <PrivateRoute exact path="/fotos" component={Pics}/>
+                <PrivateRoute exact path="/canciones" component={Songs}/> 
+                <PrivateRoute exact path="/contador" component={CountdownWrapper}/>
+                <PrivateRoute exact path="/cartas" component={Cartas}/>
+                <PrivateRoute exact path="/eventos" component={() => (<div>Proximamente</div>)}/>
+                <PrivateRoute exact path="/sorpresa" component={Surprise}/>
+                <PrivateRoute exact path="/selector" component={Selector}/>
+              </Switch>
+            </Router>
+          </div>
+        </FirebaseProvider>
       </AuthProvider>
     </div>
   );

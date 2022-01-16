@@ -1,6 +1,6 @@
 import React from "react";
 import { Route } from "react-router-dom";
-import LoginForm from './components/Login';
+import LoginForm from './modules/Login';
 import { useAuth } from './context/AuthContext';
 
 const PrivateRoute = ({ component: Component, authorities, params, ...rest }) => {

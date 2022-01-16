@@ -72,7 +72,7 @@ const NavBar = () => {
                 <Link to="/fotos" className={classes.navItem} style={{color: 'white', textDecoration: 'none'}}>Fotos</Link>
                 <Link to="/cartas" className={classes.navItem} style={{color: 'white', textDecoration: 'none'}}>Cartas</Link>
                 <Link to="/selector" className={classes.navItem} style={{color: 'white', textDecoration: 'none'}}>Para hacer</Link>
-                <div className={classes.navItem} style={{backgroundColor: '#027452'}}></div>
+                <div className={classes.navItem}></div>
                 <div onClick={() => auth.logout()} className={classes.navItem}> Salir </div>
             </div>
         </Navbar>

@@ -23,7 +23,7 @@ const AuthProvider = (props) => {
     }
 
     const logout = () => { 
-        localStorageHelper.clear();
+        localStorageHelper.setItem('logged', false);
         window.location.reload();
     }
 

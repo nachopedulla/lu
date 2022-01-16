@@ -49,8 +49,6 @@ const LoginForm = () => {
         }
     } 
 
-    const errorLabel = <p className={classes.errorLabel}>{(error) ? 'La contraseña ingresada es inválida' : '' }</p> ;  
-
     return (
         <>
           <h5 style={{margin: '40px auto 15px auto'}}>Página de lu</h5>
@@ -61,7 +59,7 @@ const LoginForm = () => {
               placeholder="Password" 
               value={password}
               onChange={(event) => passwordChangeHandler(event.target.value)}/>
-              {errorLabel}
+              {error? <p className={classes.errorLabel}>La contraseña ingresada es inválida</p> : null }
               <input className={classes.button} type="submit" onClick={() => {}} value={'Ingresar'}/>
           </Form>
       </div>
