@@ -18,17 +18,25 @@ const FirebaseProvider = (props) => {
 
     const firebase = initializeApp(firebaseConfig);
     const db = getFirestore(firebase);
+    const events = collection(db, 'events');
     const places = collection(db, 'places');
 
     async function getPlaces() {
-        const placesSnapshot = await getDocs(places);
-        let aux = placesSnapshot.docs.map(doc => {
+        return await getData(places)
+    }
+
+    async function getEvents() {
+        return await getData(events)
+    }
+
+    async function getData(collection) {
+        const snapshot = await getDocs(collection);
+        let aux = snapshot.docs.map(doc => {
             let item = {...doc.data()}
             item['id'] = doc.id
             return item
         })
         return aux
-    
     }
 
     async function addPlace(name, location, ig, category, calification) {
@@ -36,11 +44,19 @@ const FirebaseProvider = (props) => {
     }
 
     async function updatePlaces(id, data) {
-        await updateDoc(doc(db, `places/${id}`), data)
+        await update(id, data, 'places')
+    }
+
+    async function updateEvent(id, data) {
+        await update(id, data, 'events')
+    }
+
+    async function update(id, data, root) {
+        await updateDoc(doc(db, `${root}/${id}`), data)
     }
 
     return (
-        <FirebaseContext.Provider value={{getPlaces, addPlace, updatePlaces}} {...props}/>
+        <FirebaseContext.Provider value={{getPlaces, getEvents, addPlace, updatePlaces, updateEvent}} {...props}/>
     )
 }
 

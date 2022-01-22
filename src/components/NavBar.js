@@ -72,7 +72,7 @@ const NavBar = () => {
                 <Link to="/fotos" className={classes.navItem} style={{color: 'white', textDecoration: 'none'}}>Fotos</Link>
                 <Link to="/cartas" className={classes.navItem} style={{color: 'white', textDecoration: 'none'}}>Cartas</Link>
                 <Link to="/selector" className={classes.navItem} style={{color: 'white', textDecoration: 'none'}}>Para hacer</Link>
-                <div className={classes.navItem}></div>
+                <Link to='/eventos' className={classes.navItem} style={{color: 'white', textDecoration: 'none'}}>Novedades</Link>
                 <div onClick={() => auth.logout()} className={classes.navItem}> Salir </div>
             </div>
         </Navbar>

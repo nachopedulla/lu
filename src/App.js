@@ -7,7 +7,7 @@ import Songs from './modules/Songs';
 import Pics from './modules/Pics';
 import Cartas from './modules/Cartas';
 import Selector from './modules/Selector'
-import Surprise from './modules/Surprise'
+import Events from './modules/events/Events'
 import { AuthProvider } from './context/AuthContext';
 import { HashRouter as Router, Switch } from "react-router-dom";
 import PrivateRoute from './PrivateRoute';
@@ -43,8 +43,7 @@ const App = () => {
                 <PrivateRoute exact path="/canciones" component={Songs}/> 
                 <PrivateRoute exact path="/contador" component={CountdownWrapper}/>
                 <PrivateRoute exact path="/cartas" component={Cartas}/>
-                <PrivateRoute exact path="/eventos" component={() => (<div>Proximamente</div>)}/>
-                <PrivateRoute exact path="/sorpresa" component={Surprise}/>
+                <PrivateRoute exact path="/eventos" component={Events}/>
                 <PrivateRoute exact path="/selector" component={Selector}/>
               </Switch>
             </Router>

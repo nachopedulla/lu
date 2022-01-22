@@ -49,6 +49,7 @@ const Selector = () => {
 
     async function qualifyItems() {
         await qualify.forEach(place => updatePlace(place))
+        setQualify([])
         fetchOptions()
     }
 
