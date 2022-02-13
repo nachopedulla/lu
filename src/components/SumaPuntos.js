@@ -31,6 +31,7 @@ const SumaPuntos = () => {
         const newPoints = currentPoints + sum 
         firebase.updatePoints({points: newPoints})
         setPoints(newPoints)
+        setSelected([])
     }
 
     const sendMessage = (sum) =>  {
