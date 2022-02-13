@@ -1,5 +1,6 @@
 import React from "react";
 import { makeStyles } from '@material-ui/core/styles';
+import SumaPuntos from "../components/SumaPuntos";
 
 const useStyles = makeStyles({
     line: {
@@ -30,6 +31,7 @@ const MainPage = () => {
                 <p> Esta página es para que siempre y desde cualquier lugar del 🌎 sepas lo mucho que te quiero 💖 </p>
             </div>
             <div className={classes.line}></div>
+            <SumaPuntos/>
         </>
     )
 }

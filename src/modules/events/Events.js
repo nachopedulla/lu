@@ -1,7 +1,7 @@
 
 import { React, useEffect, useState } from 'react';
 import { useFirebase } from '../../context/FirebaseContext';
-import NextEvents from './NextEvents';
+import ViewedEvents from './ViewedEvents';
 import PendingEvents from './PendingEvents'
 import moment from 'moment';
 
@@ -35,13 +35,15 @@ const Events = () => {
     }
 
     const pending = events.filter(({viewed}) => !viewed)
-    const next = events.filter(({viewed, date}) => viewed && moment(date, 'dd/MM/yyyy') >= new Date(0))
+    const next = events.filter(({viewed, date}) => viewed && moment(date, 'dd/MM/yyyy') > new Date())
+    const previous = events.filter(({viewed, date}) => viewed && moment(date, 'dd/MM/yyyy') <= new Date())
 
     return (
         <>
             <h4>Eventos, regalos y más</h4>            
             <PendingEvents events={pending} viewHandler={viewedHandler}/>
-            <NextEvents events={next}/>
+            <ViewedEvents title='Próximos' events={next}/>
+            <ViewedEvents title='Previos' events={previous}/>
         </>
     )
 }

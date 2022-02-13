@@ -20,6 +20,7 @@ const FirebaseProvider = (props) => {
     const db = getFirestore(firebase);
     const events = collection(db, 'events');
     const places = collection(db, 'places');
+    const points = collection(db, 'points');
 
     async function getPlaces() {
         return await getData(places)
@@ -27,6 +28,9 @@ const FirebaseProvider = (props) => {
 
     async function getEvents() {
         return await getData(events)
+    }
+    async function getPoints() {
+        return await getData(points)
     }
 
     async function getData(collection) {
@@ -47,6 +51,10 @@ const FirebaseProvider = (props) => {
         await update(id, data, 'places')
     }
 
+    async function updatePoints(data) {
+        await update('current_points', data, 'points')
+    }
+
     async function updateEvent(id, data) {
         await update(id, data, 'events')
     }
@@ -56,7 +64,7 @@ const FirebaseProvider = (props) => {
     }
 
     return (
-        <FirebaseContext.Provider value={{getPlaces, getEvents, addPlace, updatePlaces, updateEvent}} {...props}/>
+        <FirebaseContext.Provider value={{getPlaces, getEvents, getPoints, addPlace, updatePlaces, updateEvent, updatePoints}} {...props}/>
     )
 }
 

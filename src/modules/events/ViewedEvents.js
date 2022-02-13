@@ -24,14 +24,14 @@ const useStyles = makeStyles({
     }
 })
 
-const NextEvents = ({events}) => {
+const ViewedEvents = ({title, events}) => {
     
     const classes = useStyles()
 
     return (
         events.length > 0 ? (
             <div className={classes.next}>
-                <h6>Proximas</h6>
+                <h6>{title}</h6>
                 <table className={classes.table}>
                     <thead>
                         <tr>
@@ -53,4 +53,4 @@ const NextEvents = ({events}) => {
     )
 }
 
-export default NextEvents;
+export default ViewedEvents;
