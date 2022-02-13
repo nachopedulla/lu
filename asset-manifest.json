@@ -1,19 +1,19 @@
 {
   "files": {
     "main.css": "/lu/static/css/main.a617e044.chunk.css",
-    "main.js": "/lu/static/js/main.c251dba9.chunk.js",
-    "main.js.map": "/lu/static/js/main.c251dba9.chunk.js.map",
-    "runtime-main.js": "/lu/static/js/runtime-main.6983c17d.js",
-    "runtime-main.js.map": "/lu/static/js/runtime-main.6983c17d.js.map",
+    "main.js": "/lu/static/js/main.51d239fe.chunk.js",
+    "main.js.map": "/lu/static/js/main.51d239fe.chunk.js.map",
+    "runtime-main.js": "/lu/static/js/runtime-main.f20eced4.js",
+    "runtime-main.js.map": "/lu/static/js/runtime-main.f20eced4.js.map",
     "static/css/2.4be38407.chunk.css": "/lu/static/css/2.4be38407.chunk.css",
-    "static/js/2.b7830b8b.chunk.js": "/lu/static/js/2.b7830b8b.chunk.js",
-    "static/js/2.b7830b8b.chunk.js.map": "/lu/static/js/2.b7830b8b.chunk.js.map",
-    "static/js/3.c2f775e5.chunk.js": "/lu/static/js/3.c2f775e5.chunk.js",
-    "static/js/3.c2f775e5.chunk.js.map": "/lu/static/js/3.c2f775e5.chunk.js.map",
+    "static/js/2.840e2d0e.chunk.js": "/lu/static/js/2.840e2d0e.chunk.js",
+    "static/js/2.840e2d0e.chunk.js.map": "/lu/static/js/2.840e2d0e.chunk.js.map",
+    "static/js/3.78909071.chunk.js": "/lu/static/js/3.78909071.chunk.js",
+    "static/js/3.78909071.chunk.js.map": "/lu/static/js/3.78909071.chunk.js.map",
     "index.html": "/lu/index.html",
     "static/css/2.4be38407.chunk.css.map": "/lu/static/css/2.4be38407.chunk.css.map",
     "static/css/main.a617e044.chunk.css.map": "/lu/static/css/main.a617e044.chunk.css.map",
-    "static/js/2.b7830b8b.chunk.js.LICENSE.txt": "/lu/static/js/2.b7830b8b.chunk.js.LICENSE.txt",
+    "static/js/2.840e2d0e.chunk.js.LICENSE.txt": "/lu/static/js/2.840e2d0e.chunk.js.LICENSE.txt",
     "static/media/Año1.02648696.jpeg": "/lu/static/media/Año1.02648696.jpeg",
     "static/media/Año2.4e161efc.jpeg": "/lu/static/media/Año2.4e161efc.jpeg",
     "static/media/Año4.617329bb.jpeg": "/lu/static/media/Año4.617329bb.jpeg",
@@ -34,10 +34,10 @@
     "static/media/vagancia.462c4aaf.jpeg": "/lu/static/media/vagancia.462c4aaf.jpeg"
   },
   "entrypoints": [
-    "static/js/runtime-main.6983c17d.js",
+    "static/js/runtime-main.f20eced4.js",
     "static/css/2.4be38407.chunk.css",
-    "static/js/2.b7830b8b.chunk.js",
+    "static/js/2.840e2d0e.chunk.js",
     "static/css/main.a617e044.chunk.css",
-    "static/js/main.c251dba9.chunk.js"
+    "static/js/main.51d239fe.chunk.js"
   ]
 }
