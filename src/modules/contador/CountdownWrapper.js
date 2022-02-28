@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import Countdown from "../components/Countdown";
+import Countdown from "./Countdown";
 
 const CountdownWrapper = () => {
     const [currentDate, setCurrentDate] = useState(new Date());

@@ -1,9 +1,9 @@
 import { React, useEffect, useState } from 'react'
-import { useFirebase } from '../context/FirebaseContext';
-import PlaceTable from '../components/PlaceTable';
-import NewPlace from '../components/NewPlace';
+import { useFirebase } from '../../context/FirebaseContext';
+import PlaceTable from './PlaceTable';
+import NewPlace from './NewPlace';
 import Random from './Random';
-import Button from '../components/Button';
+import Button from '../../components/Button';
 
 const Selector = () => {
 

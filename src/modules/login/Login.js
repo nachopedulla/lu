@@ -1,6 +1,6 @@
 import { React } from "react";
 import Form from 'react-bootstrap/Form';
-import { useAuth } from '../context/AuthContext';
+import { useAuth } from '../../context/AuthContext';
 import { useState } from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 

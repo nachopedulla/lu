@@ -1,6 +1,6 @@
 import React from "react";
 import { makeStyles } from '@material-ui/core/styles';
-import SumaPuntos from "../components/SumaPuntos";
+import SumaPuntos from "../puntos/SumaPuntos";
 
 const useStyles = makeStyles({
     line: {

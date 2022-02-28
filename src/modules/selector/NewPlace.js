@@ -1,6 +1,6 @@
 import { makeStyles } from '@material-ui/core'
 import { React, useState } from 'react'
-import Button from './Button'
+import Button from '../../components/Button'
 
 const useStyles = makeStyles({
     back: {

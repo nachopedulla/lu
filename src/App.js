@@ -2,17 +2,18 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import './App.css';
 import { makeStyles } from '@material-ui/core/styles';
 import NavBar from './components/NavBar';
-import MainPage from './modules/MainPage';
-import Songs from './modules/Songs';
-import Pics from './modules/Pics';
-import Cartas from './modules/Cartas';
-import Selector from './modules/Selector'
+import MainPage from './modules/home/MainPage';
+import Songs from './modules/canciones/Songs';
+import Pics from './modules/fotos/Pics';
+import Cartas from './modules/cartas/Cartas';
+import Selector from './modules/selector/Selector'
 import Events from './modules/events/Events'
 import { AuthProvider } from './context/AuthContext';
 import { HashRouter as Router, Switch } from "react-router-dom";
 import PrivateRoute from './PrivateRoute';
-import CountdownWrapper from './modules/CountdownWrapper';
+import CountdownWrapper from './modules/contador/CountdownWrapper';
 import { FirebaseProvider } from './context/FirebaseContext';
+import Catalogo from './modules/puntos/Catalogo';
 
 const useStyles = makeStyles({
   content: {
@@ -45,6 +46,7 @@ const App = () => {
                 <PrivateRoute exact path="/cartas" component={Cartas}/>
                 <PrivateRoute exact path="/eventos" component={Events}/>
                 <PrivateRoute exact path="/selector" component={Selector}/>
+                <PrivateRoute exact path="/catalogo" component={Catalogo}/>
               </Switch>
             </Router>
           </div>

@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import Carta from '../components/Carta'
+import Carta from './Carta'
 
 const Cartas = () => {
 

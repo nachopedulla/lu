@@ -1,6 +1,6 @@
 import React from 'react'
 import { makeStyles } from '@material-ui/core/styles';
-import Cafe from '../assets/Star.png';
+import Cafe from '../../assets/Star.png';
 
 const useStyles = makeStyles({
     dataCell: { border: '1px solid black', padding: '0px 2px', height: '40px' },

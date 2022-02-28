@@ -1,14 +1,17 @@
 import React, { useEffect, useState } from 'react'
-import { useFirebase } from '../context/FirebaseContext'
+import { useFirebase } from '../../context/FirebaseContext'
 import Acciones from './Actions'
 import AddPoints from './AddPoints'
 import PuntosActuales from './Puntos'
+import Catalogo from './Catalogo'
 import swal from 'sweetalert';
+import Title from '../../components/Title'
 
 const SumaPuntos = () => {
 
     const [currentPoints, setPoints] = useState(0)
     const [selected, setSelected] = useState([])
+
     let firebase = useFirebase()
 
     useEffect(() => {
@@ -28,10 +31,19 @@ const SumaPuntos = () => {
     const updateHandler = () => {
         const sum = selected.reduce(function(anterior, nuevo) { return anterior + nuevo.puntos}, 0);
         sendMessage(sum)
-        const newPoints = currentPoints + sum 
+        updatePoints(sum)
+        setSelected([])
+    }
+
+    const changeItemHandler = (item) => {
+        swal(`Tus puntos se cambiaron correctamente`)
+        updatePoints(item.puntos * -1)
+    }
+
+    const updatePoints = (points) => {
+        const newPoints = currentPoints + points
         firebase.updatePoints({points: newPoints})
         setPoints(newPoints)
-        setSelected([])
     }
 
     const sendMessage = (sum) =>  {
@@ -43,11 +55,12 @@ const SumaPuntos = () => {
 
     return (
         <div style={{margin: '20px auto'}}>
-            <h5>Puntos</h5>
+            <Title text={'Puntos'}/>
             <p>Suma puntos y cambialos por recompenzas</p>
             <PuntosActuales puntos={currentPoints}/>
             <Acciones selected={selected} clickHandler={clickHandler}/>
             <AddPoints selected={selected} updateHandler={updateHandler} cancelHandler={() => setSelected([])}/>
+            <Catalogo puntos={currentPoints} changeItemHandler={changeItemHandler} />
         </div>
     )
 }
